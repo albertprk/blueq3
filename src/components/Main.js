@@ -43,12 +43,13 @@ export class Main extends Component {
             );
         } else {
             return (<div className="App">
+                    <NavBar/>
                 <header className="App-header">
                     <img src={this.state.profilePic} width="125px" height="125px" radius="70px" className="profilePic"></img>
                     <div className="welcome">Welcome, {this.state.username}!</div>
                     <br/><br/>
                     <form>
-                        <input type="submit" value="signalling team" className="requesting" onClick={this.handleClickOff}/>
+                        <input type="submit" value="signalling team!" className="requesting" onClick={this.handleClickOff}/>
                     </form>
                 </header>
             </div>

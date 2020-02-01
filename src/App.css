@@ -32,6 +32,22 @@
   border:none;
 }
 
+.NavBar {
+    height: 30px;
+    padding-top: 12px;
+    padding-left: 25px;
+    background-image: linear-gradient(#2566c4, #0645bc);
+    box-shadow: 5px 5px #023fa8;
+    text-align: left;
+    color:white;
+    font-weight:bold;
+}
+
+.NavItema {
+    color:white;
+    text-decoration:none;
+}
+
 .submitButton {
   background-color:#002466;
   height:30px;

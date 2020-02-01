@@ -4,7 +4,7 @@ export class NavBar extends Component {
     render() {
         return (
             <div className="NavBar">
-                <div className="NavItem">Menu Placeholder</div>
+                <a href="http://localhost:3001/" className="NavItema"><div className="NavItem">BLUE PAL</div></a>
             </div>
         );
     }
