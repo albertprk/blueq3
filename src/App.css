@@ -41,10 +41,16 @@
   font-weight:bold;
   font-size:13px;
   box-shadow: 2px 2px #073a92;
+    cursor:pointer;
+}
+
+.request:hover {
+    background-color:#bfbfbf;
+    opacity:0.9;
 }
 
 .request {
-  background-color:#61cf08;
+  background-color:#bfbfbf;
   height:30px;
   width:150px;
   border:none;
@@ -52,7 +58,29 @@
   font-weight:bold;
   font-size:13px;
   box-shadow: 2px 2px #073a92;
+    cursor:pointer;
 }
+
+.request:focus {outline:0;}
+
+.requesting:hover {
+    background-color:#61cf08;
+    opacity:0.9;
+}
+
+.requesting {
+    background-color:#61cf08;
+    height:30px;
+    width:150px;
+    border:none;
+    color:white;
+    font-weight:bold;
+    font-size:13px;
+    box-shadow: 2px 2px #073a92;
+    cursor:pointer;
+}
+
+.requesting:focus {outline:0;}
 
 .welcome {
     font-size:17px;
