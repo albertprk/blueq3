@@ -58,6 +58,15 @@
     font-weight:bold;
 }
 
+.onwaytext {
+    font-size:15px;
+    font-weight:bold;
+}
+
+.onwaytextsub {
+    font-size:10px;
+}
+
 .NavItema {
     color:white;
     text-decoration:none;

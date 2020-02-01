@@ -40,6 +40,7 @@ export class Main extends Component {
                         <form className="form">
                             <div className="locationtext">What section of the store are you located?</div>
                             <select className="location">
+                                <option value="Lounge">Lounge</option>
                                 <option value="TV">TV</option>
                                 <option value="Apple">Apple</option>
                                 <option value="Gaming">Gaming</option>
@@ -57,6 +58,8 @@ export class Main extends Component {
                     <img src={this.state.profilePic} width="125px" height="125px" radius="70px" className="profilePic"></img>
                     <div className="welcome">Welcome, {this.state.username}!</div>
                     <br/><br/>
+                    <div className="onwaytext">Sit tight! An expert is on the way to help you!</div>
+                    <div className="onwaytextsub">(You can click the button again to cancel your request)</div>
                     <Spinner animation="border" variant="light" /><br/><br/>
                     <form>
                         <input type="submit" value="signalling team!" className="requesting" onClick={this.handleClickOff}/>
