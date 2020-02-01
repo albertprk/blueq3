@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import App from "../App";
+import { Link } from 'react-router-dom';
 
 export class Login extends Component {
     render() {
@@ -17,7 +18,9 @@ export class Login extends Component {
                             <input type="text" name="password" className="field" />
                         </label>
                         <br/><br/><br/>
-                        <input type="submit" value="submit" className="submitButton"/>
+                        <Link to={'./main'}>
+                            <input type="submit" value="submit" className="submitButton"/>
+                        </Link>
                     </form>
                 </header>
             </div>

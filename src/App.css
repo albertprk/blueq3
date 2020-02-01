@@ -40,6 +40,18 @@
   color:white;
   font-weight:bold;
   font-size:13px;
+  box-shadow: 2px 2px #073a92;
+}
+
+.request {
+  background-color:#61cf08;
+  height:30px;
+  width:150px;
+  border:none;
+  color:white;
+  font-weight:bold;
+  font-size:13px;
+  box-shadow: 2px 2px #073a92;
 }
 
 .formLabel {
