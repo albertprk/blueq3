@@ -54,6 +54,16 @@
   box-shadow: 2px 2px #073a92;
 }
 
+.welcome {
+    font-size:17px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.profilePic {
+    border-radius:70px;
+}
+
 .formLabel {
   color: white;
   font-size: 16px;
