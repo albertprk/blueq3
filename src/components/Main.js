@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import NavBar from "./NavBar";
+import Loader from "./Loader";
+import Spinner from "react-bootstrap/Spinner";
 
 export class Main extends Component {
 
@@ -35,7 +37,14 @@ export class Main extends Component {
                         <img src={this.state.profilePic} width="125px" height="125px" radius="70px" className="profilePic"></img>
                         <div className="welcome">Welcome, {this.state.username}!</div>
                         <br/><br/>
-                        <form>
+                        <form className="form">
+                            <div className="locationtext">What section of the store are you located?</div>
+                            <select className="location">
+                                <option value="TV">TV</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="Audio">Audio</option>
+                            </select><br/><br/>
                             <input type="submit" value="click to signal team" className="request" onClick={this.handleClickOn}/>
                         </form>
                     </header>
@@ -48,6 +57,7 @@ export class Main extends Component {
                     <img src={this.state.profilePic} width="125px" height="125px" radius="70px" className="profilePic"></img>
                     <div className="welcome">Welcome, {this.state.username}!</div>
                     <br/><br/>
+                    <Spinner animation="border" variant="light" /><br/><br/>
                     <form>
                         <input type="submit" value="signalling team!" className="requesting" onClick={this.handleClickOff}/>
                     </form>
