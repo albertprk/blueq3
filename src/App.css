@@ -53,9 +53,36 @@
     background:#0544b0;
 }
 
+.panel {
+    width:300px;
+    background:#0544b0;
+    color:white;
+    font-size:20px;
+    margin-bottom:15px;
+    padding:15px;
+}
+
+.panelinfo {
+    color:white;
+    font-size:15px;
+}
+
 .locationtext {
     font-size:12px;
     font-weight:bold;
+}
+
+.headerq3 {
+    font-weight:bold;
+    color:white;
+    font-size:45px;
+}
+
+.headerq3sub {
+    font-weight:bold;
+    color:white;
+    font-size:19px;
+    margin-top:-50px;
 }
 
 .onwaytext {
