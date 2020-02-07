@@ -33,8 +33,6 @@ export class Main extends Component {
     }
 
     render() {
-        console.log(this.state);
-        console.log(this.props);
         if (this.state.requesting === false) {
             return (
                 <div className="App">
