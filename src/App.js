@@ -4,6 +4,10 @@ import Login from "./components/Login";
 import Main from "./components/Main";
 import { Route, Switch } from 'react-router-dom';
 import {Employee} from "./components/Employee";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as stuffActions from './actions/stuffActions';
+import PropTypes from 'prop-types';
 
 class App extends Component {
     constructor(props){
@@ -25,6 +29,13 @@ class App extends Component {
 
     render() {
         const { data } = this.state;
+        console.log(this.state);
+        const App = () => (
+            <div>
+                <Switch>
+                    <Route exact path="/" component={Login}/>
+                    <Route path="/employee" component={Employee}/>
+                    <Route path="/main" component={Main} />
         const App = () => (
             <div>
                 <Switch>
@@ -36,10 +47,26 @@ class App extends Component {
         );
         return (
             <Switch>
+                <div>{this.props.stuffs}</div>
                 <App/>
             </Switch>
         );
     }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        stuffs: state.stuffs
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        stuffActions: bindActionCreators(stuffActions, dispatch)
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);
