@@ -1,27 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/Login";
+import Main from "./components/Main";
+import { Route, Switch } from 'react-router-dom';
+import {Employee} from "./components/Employee";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as stuffActions from './actions/stuffActions';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <img src="https://lh3.googleusercontent.com/u6dX8UIBQKvzQNYcBbWNjdVPrctiOmZgvO89r2mEysm-HpM7UXFUxj8W1zoSvFh_myQ"
-            width="200px" height="200px"></img>
-          <form>
-              <label>
-                  <div className="formLabel" name="password">email</div>
-                  <input type="text" className="field" />
-                  <br/><br/>
-                  <div className="formLabel">password</div>
-                  <input type="text" name="password" className="field" />
-              </label>
-          <br/><br/>
-          <input type="submit" value="submit" className="submitButton"/>
-          </form>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            data: []
+        }
+    }
+
+    componentDidMount() {
+        this.getData();
+    }
+
+    getData = () => {
+        fetch("/api/getData")
+            .then(res => res.json())
+            .then(data => this.setState({ data }))
+    };
+
+    render() {
+        const { data } = this.state;
+        console.log(this.state);
+        const App = () => (
+            <div>
+                <Switch>
+                    <Route exact path="/" component={Login}/>
+                    <Route path="/employee" component={Employee}/>
+                    <Route path="/main" component={Main} />
+                </Switch>
+            </div>
+        );
+        return (
+            <Switch>
+                <div>{this.props.stuffs}</div>
+                <App/>
+            </Switch>
+        );
+    }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        stuffs: state.stuffs
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        stuffActions: bindActionCreators(stuffActions, dispatch)
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);
