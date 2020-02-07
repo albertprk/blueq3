@@ -29,13 +29,6 @@ class App extends Component {
 
     render() {
         const { data } = this.state;
-        console.log(this.state);
-        const App = () => (
-            <div>
-                <Switch>
-                    <Route exact path="/" component={Login}/>
-                    <Route path="/employee" component={Employee}/>
-                    <Route path="/main" component={Main} />
         const App = () => (
             <div>
                 <Switch>
