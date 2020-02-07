@@ -29,6 +29,7 @@ class App extends Component {
 
     render() {
         const { data } = this.state;
+        console.log(this.state);
         const App = () => (
             <div>
                 <Switch>
