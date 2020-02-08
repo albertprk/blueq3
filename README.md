@@ -1,5 +1,7 @@
 SPECIFICATIONS
 
+
+
 REQUIREMENTS
 
 *As a user, I want to be able to signal an employee’s attention, so I can get help in the store.
@@ -13,6 +15,8 @@ Definition of done: When the user types in login credentials and submits using t
 
 As a user, I want to be able to register new login credentials, if one doesn’t already exist for me, so that I can log in. 
 Definition of done: When the user registers new 
+
+
 
 
 STRETCH REQUIREMENTS
