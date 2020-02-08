@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPECIFICATIONS
 
-## Available Scripts
+REQUIREMENTS
 
-In the project directory, you can run:
+*As a user, I want to be able to signal an employee’s attention, so I can get help in the store.
+DOD: When a user presses the grey request help button, the button turns green and signals the backend that they need help. 
 
-### `yarn start`
+As a user, I want to be rewarded loyalty points when I have been given help that results in a sale. 
+DOD: When a user presses the grey request help button, loyalty points are held in database, but not applied to account until checkout.  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a user, I want to be able to log in with my registered login credentials, so that I can access the application. 
+Definition of done: When the user types in login credentials and submits using the form, the browser successfully displays the application page. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As a user, I want to be able to register new login credentials, if one doesn’t already exist for me, so that I can log in. 
+Definition of done: When the user registers new 
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+STRETCH REQUIREMENTS
 
-### `yarn build`
+As an employee, I want to be able to see a queue of all customers who currently need help. 
+DOD: When the employee interface shows a list of all customers who have clicked the grey button on their app. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As an employee, I want to be able to locate the physical location of a customer when I click their information on the queue. 
+DOD: When the employee can click on a customer on the queue and see their location on the map
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+As an employee, I want to be able to mark a customer help request as completed so that they disappear from the queue and their points are added. 
+DOD: When the employee can check out a customer by clicking the checkout button on the queue, the customer disappears from the queue, and points are added to customer profile in the database, but not yet added to account. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As an employee, I want to be able to see a queue of all customers who have identified that they require help.
+DOD: When the employee can check the queue of customers.
 
-### `yarn eject`
+As an employee, I want to be able to checkout a customer so that their points are applied to their account. 
+DOD: When the employee can access customer information during check out to reward loyalty points.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
