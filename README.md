@@ -3,9 +3,9 @@
 ## BRIEF DESCRIPTION OF PROJECT
 Blue Q3 aims to improve in-store customer experience with the help of technology, by implementing software that enables customers to inform employees when they need help. It can be tough to gauge when a customer needs help or wants to be left alone. It can also be tough to constantly perform in-store maintenance while also monitoring customer needs at any given time. This application aims to address this problem, with the added bonus of a rewards program integrated with the app, which queues points for members when they use the app, and applies the points to the user account at checkout. 
 
-## REQUIREMENTS
+## REQUIREMENTS (User Stories)
 
-*As a user, I want to be able to signal an employee’s attention, so I can get help in the store.
+As a user, I want to be able to signal an employee’s attention, so I can get help in the store.
 DOD: When a user presses the grey request help button, the button turns green and signals the backend that they need help. 
 
 As a user, I want to be rewarded loyalty points when I have been given help that results in a sale. 
