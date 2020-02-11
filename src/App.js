@@ -30,7 +30,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/" render={() => <Login data={this.state.data} />} />
                     <Route path="/employee" component={Employee} data={this.state.data} />
-                    <Route path="/main" component={Main} data={this.state.data} />}/>
+                    <Route path="/main" render={() => <Main data={this.state.data} />} />
                 </Switch>
             </div>
         );
