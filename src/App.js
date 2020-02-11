@@ -4,10 +4,6 @@ import Login from "./components/Login";
 import Main from "./components/Main";
 import { Route, Switch } from 'react-router-dom';
 import {Employee} from "./components/Employee";
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as stuffActions from './actions/stuffActions';
-import PropTypes from 'prop-types';
 
 class App extends Component {
     constructor(props){
@@ -17,50 +13,34 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
-        this.getData();
-    }
-
     getData = () => {
         fetch("/api/getData")
             .then(res => res.json())
             .then(data => this.setState({ data }))
     };
 
+    componentDidMount() {
+        this.getData();
+    }
+
     render() {
-        const { data } = this.state;
-        console.log(this.state);
+        console.log(this.state.data);
         const App = () => (
             <div>
                 <Switch>
-                    <Route exact path="/" render={(data) => <Login {...data} isAuthed={true} />}/>
-                    <Route path="/employee" component={Employee}/>
-                    <Route path="/main" render={(data) => <Main {...data} isAuthed={true} />}/>
+                    <Route path="/" render={() => <Login data={this.state.data} />} />
+                    <Route path="/employee" component={Employee} data={this.state.data} />
+                    <Route path="/main" component={Main} data={this.state.data} />}/>
                 </Switch>
             </div>
         );
         return (
             <Switch>
-                <div>{this.props.stuffs}</div>
                 <App/>
             </Switch>
         );
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        stuffs: state.stuffs
-    };
-}
 
-function mapDispatchToProps(dispatch) {
-    return {
-        stuffActions: bindActionCreators(stuffActions, dispatch)
-    };
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
+export default App;

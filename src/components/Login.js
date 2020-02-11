@@ -6,9 +6,15 @@ export class Login extends Component {
         super(props);
         this.state = {
             username: "",
+            password: "",
             points: 0,
             profilePic: ""
         }
+    }
+
+    componentDidMount() {
+        console.log(this.props.data);
+        console.log(Object.keys(this.props.data));
     }
 
     handleUsernameChange = (e) => {
@@ -19,11 +25,16 @@ export class Login extends Component {
     };
 
     handlePasswordChange = (e) => {
+        this.setState({
+            password: e.target.value
+        });
+        console.log(this.state.password);
     };
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        this.props.history.push('./main');
+        e.preventDefault();
+        const usernames = Object.keys(this.props.data);
+        console.log("USERNAME: " + this.state.username);
     }
 
     render() {

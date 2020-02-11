@@ -8,8 +8,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // An api endpoint that returns a short list of items
 app.get('/api/getData', (req,res) => {
-    let data = [
-        {
+    let data = {
+        "Albert": {
             username: "Albert",
             user: true,
             email: "ricky@gmail.com",
@@ -18,7 +18,7 @@ app.get('/api/getData', (req,res) => {
             points: 0,
             requesting: false
         },
-        {
+        "Janet": {
             username: "Janet",
             user: true,
             email: "janet@gmail.com",
@@ -27,7 +27,7 @@ app.get('/api/getData', (req,res) => {
             points: 0,
             requesting: false
         },
-        {
+        "Ricky": {
             username: "Artur",
             user: true,
             email: "artur@gmail.com",
@@ -36,7 +36,7 @@ app.get('/api/getData', (req,res) => {
             points: 0,
             requesting: false
         },
-        {
+        "Employee": {
             username: "Employee",
             user: false,
             email: "employee@bestbuy.ca",
@@ -45,7 +45,7 @@ app.get('/api/getData', (req,res) => {
             points: 0,
             requesting: false
         }
-    ];
+    };
     res.json(data);
     console.log('Sent list of items');
 });
